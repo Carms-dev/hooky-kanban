@@ -1,0 +1,109 @@
+:root {
+  --primary: #282C34;
+  --secondary: #eee;
+  --radius: 5px;
+}
+
+@font-face {
+  font-family: 'MADEDillan';
+  src: local('MADEDillan'), url(../fonts/MADEDillan.otf) format('opentype');
+}
+
+
+html { 
+  font-size: 16px; 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'MADEDillan';
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  border: 0;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--primary);
+  }
+}
+
+/* Header */
+.App-header {
+  text-align: center;
+  background-color: var(--primary);
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.5rem;
+}
+
+// inline styling
+.inline-text {
+  padding: 0.5rem;
+  border: 0;
+  width: 85%;
+}
+.inline-btn {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.inline-text--active,
+.inline-input--active,
+.inline-btn--active {
+  cursor: pointer;
+  display: inline-block;
+  
+}
+.inline-text--hidden,
+.inline-input--hidden,
+.inline-btn--hidden {
+  display: none;
+}
+
+// Column
+.column-container {
+  margin: 0.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  min-height: calc(100vh - 42px);
+  
+  & > * {
+    width: 272px;
+    scroll-snap-align: center;
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 1rem;
+    background: var(--secondary);
+    border-radius: var(--radius);
+  }
+}
+
+// button
+
+.btn-primary {
+  background: transparent;
+  border: 1px solid var(--primary);
+  padding: 7px 40px;
+
+}
